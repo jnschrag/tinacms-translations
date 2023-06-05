@@ -1,7 +1,7 @@
 {
-  "name": "gndem.org",
+  "name": "tinacms-translations",
   "version": "1.0.0",
-  "description": "Website for GNDEM.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npx tinacms dev -c \"npx @11ty/eleventy --serve\"",
