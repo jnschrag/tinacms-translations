@@ -1,0 +1,117 @@
+/*===========================
+=            Page           =
+===========================*/
+
+.declaration {
+	.post-content {
+		order: 2;
+		@include breakpoint("medium") {
+			padding-right: 4rem;
+			order: 1;
+		}
+	}
+
+	&-pdf {
+		margin-bottom: 1rem;
+	}
+
+	&-sidebar {
+		order: 1;
+
+		@include breakpoint("medium") {
+			padding-left: 2rem;
+			order: 2;
+		}
+
+		.subheading {
+			margin-bottom: 0.5rem;
+			@extend %subheading;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 20%;
+				height: 3px;
+				margin-top: 0.25rem;
+				background-color: $blue;
+			}
+		}
+
+		ul {
+			margin: 0;
+			padding-left: 1.1rem;
+			list-style: none;
+
+			ul {
+				padding-left: 1.2rem;
+
+				a {
+					font-weight: normal;
+					&::before {
+						width: 5px;
+					    height: 5px;
+						background-color: $white;
+						border: 1px solid $dark-blue;
+					}
+				}
+			}
+
+			a {
+				position: relative;
+				font-weight: bold;
+
+				&::before {
+					content: '';
+				    display: block;
+				    position: absolute;
+				    top: 6px;
+				    left: -1rem;
+				    width: 8px;
+				    height: 8px;
+				    background-color: $dark-blue;
+				    border-radius: 50%;
+				}
+			}
+		}
+
+		a::before,
+		a::after,
+		.btn::before,
+		.btn::after {
+			display: none;
+		}
+	}
+}
+
+#members_table_length,
+#members_table_filter {
+	margin-bottom: 2rem;
+}
+
+#members_table {
+	margin-bottom: 2rem;
+
+	thead {
+		th {
+			text-align: left;
+			padding: 8px 10px;
+		}
+	}
+
+	tr.even {
+		background-color: $off-white;
+	}
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	background: $off-white !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	background: $red !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+}

@@ -1,0 +1,9 @@
+<ul class="main-menu">
+  {% for item in navigation.header %}
+    <li class="menu-item-{{ loop.index }}">
+      <a href="{{ item.url | locale_url }}" title="Go to {{ item.title | i18n }}"
+        >{{ item.title | i18n }}</a
+      >
+    </li>
+  {% endfor %}
+</ul>

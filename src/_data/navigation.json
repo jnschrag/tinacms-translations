@@ -1,0 +1,36 @@
+{
+  "header": [
+    {
+      "identifier": "home",
+      "url": "/",
+      "title": "menu_home"
+    },
+    {
+      "identifier": "about",
+      "url": "/about/",
+      "title": "menu_about"
+    }
+  ],
+  "languages": [
+    {
+      "label": "English",
+      "code": "en"
+    },
+    {
+      "label": "Español",
+      "code": "es"
+    },
+    {
+      "label": "Français",
+      "code": "fr"
+    },
+    {
+      "label": "عربى",
+      "code": "ar"
+    },
+    {
+      "label": "Русский",
+      "code": "ru"
+    }
+  ]
+}

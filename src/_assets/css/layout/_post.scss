@@ -1,0 +1,116 @@
+/*=============================
+=            Posts            =
+=============================*/
+.post {
+  .post-header {
+    margin-bottom: 1rem;
+  }
+
+  .post-list & {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $light-gray;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title,
+  .page &-title {
+    color: $black;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $dark-red;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 20%;
+      height: 3px;
+      margin-top: 0.75rem;
+      background-color: $yellow;
+      transition: width 0.3s ease-in-out;
+
+      &:hover {
+        width: 100%;
+      }
+    }
+  }
+
+  .page &-title {
+    margin-bottom: 1.5rem;
+  }
+
+  &-meta {
+    @extend %meta;
+    margin-bottom: 0.25rem;
+  }
+
+  .post-feature-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    border: 3px solid $light-gray;
+
+    @include breakpoint('medium') {
+      display: inline-block;
+      float: left;
+      max-width: 40%;
+      margin: 0 1rem 0.25rem 0;
+    }
+
+    .post-list & {
+      @include breakpoint('medium') {
+        max-width: 30%;
+      }
+    }
+  }
+
+  &-content {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .read-more {
+    position: relative;
+    display: inline-block;
+    @include fontSize(14px);
+    text-transform: uppercase;
+    @include arrow-after($yellow, 0.8em, 0.1em, -1.5em);
+  }
+
+  &-footer {
+    .tag-list {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid $light-gray;
+    }
+
+    .tag-list__title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .tag-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+    }
+
+    .tag-list__tag:not(:first-of-type)::before {
+      content: ', ';
+    }
+  }
+}

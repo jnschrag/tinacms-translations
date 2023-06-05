@@ -1,0 +1,68 @@
+/*===============================
+=            Buttons            =
+===============================*/
+
+.btn
+{
+	display: inline-block;
+	background-color: $off-white;
+	font-family: $font__open-sans;
+	@include fontSize(16px);
+	line-height: 1;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-radius: 0;
+	color: $white;
+	transition: all 0.3s ease-in-out;
+}
+
+%btn-red {
+	background-color: $red;
+
+	&:hover {
+		background-color: $dark-red;
+		color: $white;
+	}
+}
+
+%btn-blue {
+	background-color: $blue;
+
+	&:hover {
+		background-color: $dark-blue;
+		color: $white;
+	}
+}
+
+%btn-yellow {
+	background-color: $yellow;
+	color: $black;
+
+	&:hover {
+		background-color: $dark-yellow;
+	}
+}
+
+.btn-download,
+.btn-red {
+	@extend %btn-red;
+}
+
+.btn-blue {
+	@extend %btn-blue;
+}
+
+.btn-yellow {
+	@extend %btn-yellow;
+}
+
+.btn-gray {
+	color: $black;
+
+	&:hover {
+		background-color: $light-gray;
+	}
+}

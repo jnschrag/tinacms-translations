@@ -1,0 +1,51 @@
+/*===========================
+=            RTL            =
+===========================*/
+
+html[lang="ar"] {
+	body {
+		direction:rtl;
+		text-align: right;
+	}
+
+	.site-header .social-media-list {
+		left: 0;
+		right: unset;
+	}
+
+	.site-nav .language-selection {
+		text-align: left;
+
+		&::after {
+			left: 0;
+			right: unset;
+		}
+	}
+
+	.site-nav .language-menu {
+		left: 0;
+		right: unset;
+	}
+
+	.home {
+		padding-right: 0;
+		padding-left: 4rem;
+	}
+
+	.sidebar a::after,
+	.sidebar a::before,
+	.read-more a::after,
+	.read-more a::before {
+		display: none;
+	}
+
+	.site-footer .footer-heading .globe-logo {
+		margin-right: 0;
+		margin-left: 0.75rem;
+	}
+
+	.site-footer p {
+		padding-right: 0;
+		padding-left: 3rem;
+	}
+}

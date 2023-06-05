@@ -1,0 +1,27 @@
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="footer-heading"><img src="{{ site.url }}{{ "/_assets/img/gndem_globe.svg" }}" alt="{{ site.abbr }}" title="{{ site.abbr }}" class="globe-logo" />{{ site.title }}</h2>
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <p>{{ 'footer_desc' | i18n }}</p>
+      </div>
+      <div class="col-xs-12 col-md-3 footer-contact">
+        <h4 class="subheading">Contact Us</h4>
+        {% include 'components/social.njk' %}
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; {{ 'copyright' | i18n }} | <a href="{{ "/en/privacy-policy/" }}">{{ 'privacy_policy' | i18n }}</a> | <a href="{{ "/en/terms-and-conditions/" }}">{{ 'terms_conditions' | i18n }}</a>
+    </div>
+  </div>
+</footer>
+{% include 'components/gdpr-notification.njk' %}
+
+{# TODO: Check JS bundle content #}
+<script src="{{site.url}}{{ "/_assets/js/bundle.js" }}" type="text/javascript"></script>
+
+{% if page.fileSlug == 'members' %}
+  {% include 'components/members-js.njk' %}
+{% endif %}

@@ -1,0 +1,63 @@
+/*=============================
+=            Forms            =
+=============================*/
+
+.join-form label {
+    display: block;
+    margin: 0px 0px 15px 0px;
+    clear: both;
+}
+.join-form label > span {
+    width: 30%;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 1rem;
+}
+.join-form span.required {
+    color:red;
+}
+.join-form .tel-number-field {
+    width: 40px;
+    text-align: center;
+}
+.join-form input.input-field, .join-form .select-field {
+    width: 50%; 
+}
+.join-form input.input-field, 
+.join-form .tel-number-field, 
+.join-form .textarea-field, 
+ .join-form .select-field {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.join-form .input-field:focus, 
+.join-form .tel-number-field:focus, 
+.join-form .textarea-field:focus,  
+.join-form .select-field:focus {
+    border: 1px solid #0C0;
+}
+.join-form .textarea-field {
+    height:100px;
+    width: 50%;
+}
+.join-form input[type=submit],
+.join-form input[type=button] {
+    @extend .btn;
+    background-color: $blue;
+}
+.join-form input[type=submit]:hover,
+.join-form input[type=button]:hover {
+    background-color: $dark-blue;
+    color: $white;
+}

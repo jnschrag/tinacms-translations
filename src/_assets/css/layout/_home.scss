@@ -1,0 +1,96 @@
+/*============================
+=            Home            =
+============================*/
+.home-content-container {
+	order: 2;
+
+	@include breakpoint("medium") {
+		order: 1;
+	}
+}
+
+.home {
+
+	@include breakpoint("medium") {
+		padding-right: 4rem;
+	}
+
+	.post-list-heading {
+		@extend %subheading;
+		color: $gray;
+	}
+
+	&-mission {
+		margin: 2rem auto;
+
+		@include breakpoint("medium") {
+			margin-bottom: 4rem;
+		}
+
+		p {
+			margin: 0;
+			padding: 2rem;
+			background-color: $off-white;
+			border-left: 3px solid $dark-red;
+			@include fontSize(18px);
+		}
+	}
+
+	.read-all {
+		position: relative;
+		display: inline-block;
+		font-family: $font__merriweather;
+		text-transform: uppercase;
+		@include arrow-after($yellow);
+	}
+}
+
+.home,
+.sidebar {
+	.subheading {
+		@extend %subheading;
+	}
+}
+
+.sidebar {
+	order: 1;
+	margin-bottom: 4rem;
+
+	@include breakpoint("medium") {
+		order: 2;
+	}
+
+	.subheading {
+		margin-bottom: 0.5rem;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20%;
+			height: 3px;
+			margin-top: 0.25rem;
+			background-color: $blue;
+		}
+	}
+
+	p {
+		@include fontSize(14px);
+		margin-bottom: 0;
+	}
+
+	&-declaration {
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid $light-gray;
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+		margin-top: 0.5rem;
+		font-family: $font__merriweather;
+
+		@include arrow-after($yellow);
+	}
+}
+

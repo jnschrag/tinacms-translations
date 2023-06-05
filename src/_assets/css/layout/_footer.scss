@@ -1,0 +1,83 @@
+/*==============================
+=            Footer            =
+==============================*/
+.site-footer {
+	background-color: $red;
+	margin-top: 2rem;
+	padding-top: 2rem;
+	color: $light-red;
+
+	@include breakpoint("medium") {
+		margin-top: 3rem;
+	}
+
+	.footer-heading {
+		margin-bottom: 1rem;
+		@include fontSize(24px);
+		color: $white;
+
+		@include breakpoint("medium") {
+			@include fontSize(40px);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20%;
+			height: 3px;
+			margin-top: 0.25rem;
+			background-color: $yellow;
+		}
+
+		.globe-logo {
+			width: auto;
+		    height: 22px;
+		    margin-right: 0.75rem;
+
+		    @include breakpoint("medium") {
+		    	height: 38px;
+		    }
+		}
+	}
+
+	p {
+		@include fontSize(14px);
+		margin-bottom: 2rem;
+		padding-right: 3rem;
+	}
+
+	.footer-contact {
+		margin-bottom: 1rem;
+	}
+
+	.subheading {
+	    margin-bottom: 0.5rem;
+	    font-family: $font__open-sans;
+	    @include fontSize(16px);
+	    text-transform: uppercase;
+
+	    &::after {
+			content: "";
+			display: block;
+			width: 20%;
+			height: 3px;
+			margin-top: 0.25rem;
+			background-color: $dark-red;
+		}
+	}
+
+	.copyright {
+		position: relative;
+		background-color: $dark-red;
+		padding: 0.5rem 0.1rem;
+		@include fontSize(12px);
+		color: $light-red;
+		@include fullWidthBackground($dark-red);
+
+		a {
+			color: $light-red;
+			text-decoration: underline;
+			&:hover { color: $yellow; }
+		}
+	}
+}
